@@ -142,6 +142,7 @@ jobs:
           python -m pip install ${env:GITHUB_WORKSPACE}\dist\pelican-4.2.0.tar.gz
           echo "Pelican version:"
           pelican --version
+          python -m pip uninstall -y pelican
 
 
   install_wheel:
@@ -161,6 +162,7 @@ jobs:
           python -m pip install ${env:GITHUB_WORKSPACE}\dist\pelican-4.2.0-py3-none-any.whl
           echo "Pelican version:"
           pelican --version
+          python -m pip uninstall -y pelican
 
 
   deploy:
